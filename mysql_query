@@ -1,0 +1,52 @@
+create database melting_delightz;
+use meling_delightz;
+
+
+CREATE TABLE `cakedetails` (
+  `cakeId` int NOT NULL AUTO_INCREMENT,
+  `cakename` varchar(100) DEFAULT NULL,
+  `flavour` varchar(100) DEFAULT NULL,
+  `price` varchar(100) DEFAULT NULL,
+  `status` varchar(100) DEFAULT NULL,
+  `photo` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`cakeId`)
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `cakeorders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `orderid` varchar(15) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `cakename` varchar(45) DEFAULT NULL,
+  `price` varchar(15) DEFAULT NULL,
+  `payment` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `cart` (
+  `cid` int NOT NULL AUTO_INCREMENT,
+  `ckid` int DEFAULT NULL,
+  `uid` int DEFAULT NULL,
+  `cakename` varchar(45) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  `totalprice` double DEFAULT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `user` (
+  `id` int DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `phone_no` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `landmark` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `state` varchar(100) DEFAULT NULL,
+  `pincode` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
